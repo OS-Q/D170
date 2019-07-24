@@ -653,7 +653,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>剩余数据</th>
+                        <th>数据空间</th>
                         <td>
                             <div class='progress' style="margin-bottom: 0 !important;">
                                 <div id="flash" class="progress-bar progress-bar-primary" role="progressbar">
@@ -663,7 +663,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>剩余磁盘</th>
+                        <th>磁盘空间</th>
                         <td>
                             <div class='progress' style="margin-bottom: 0 !important;">
                                 <div id="spiffs" class="progress-bar progress-bar-primary" role="progressbar">
@@ -682,7 +682,7 @@
                         <td id="ssidstat"></td>
                     </tr>
                     <tr>
-                        <th>IP v4</th>
+                        <th>IP V4</th>
                         <td id="ip"></td>
                     </tr>
                     <tr>
@@ -712,7 +712,7 @@
 <div id="alarmscontent">
     <br>
     <br>
-    <legend>告警设置</legend>
+    <legend>告警通知</legend>
         <br>
         <div class="row form-group">
             <label class="col-xs-3">位置标签 <i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set the Room/Object name. It will be used in messages."></i></label>
@@ -729,38 +729,6 @@
               </span>
         </span>
     </div>
-    <br>
-    <div class="row form-group">
-        <label class="col-xs-3">湿度范围 [%]<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="通过拖动选取设定湿度上下限区间，区间内为正常值"></i></label>
-        <span class="col-xs-9 col-md-5" style="margin-top:-20px;">
-              <span id="slider2" class="color-green">
-              <input type="text" class="js-range-slider2" value="" />
-              </span>
-        </span>
-    </div>
-    <div class="row form-group">
-        <label class="col-xs-3">气压范围 [Pa]<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="通过拖动选取设定气压上下限区间，区间内为正常值"></i></label>
-        <span class="col-xs-9 col-md-5" style="margin-top:-20px;">
-              <span id="slider2" class="color-green">
-              <input type="text" class="js-range-slider2" value="" />
-              </span>
-        </span>
-    </div>
-    <div class="row form-group">
-        <label class="col-xs-3">光强范围 [Lx]<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="通过拖动选取设定气压上下限区间，区间内为正常值"></i></label>
-        <span class="col-xs-9 col-md-5" style="margin-top:-20px;">
-              <span id="slider2" class="color-green">
-              <input type="text" class="js-range-slider2" value="" />
-              </span>
-        </span>
-    </div>
-    <div class="row form-group">
-        <label class="col-xs-3">温度告警信息<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report temperature outside of limits."></i></label>
-        <span class="col-xs-9 col-md-5">
-              <input class="form-control input-sm" placeholder='eg. "The temperature is outside the specified limits"' value="" id="tempalarm" type="text">
-              </span>
-        <br>
-    </div>
     <div class="row form-group">
         <label class="col-xs-3">温度正常信息<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report temperature within of limits."></i></label>
         <span class="col-xs-9 col-md-5">
@@ -769,11 +737,20 @@
         <br>
     </div>
     <div class="row form-group">
-        <label class="col-xs-3">湿度告警信息<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report humidity outside of limits."></i></label>
+        <label class="col-xs-3">温度异常通知<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report temperature outside of limits."></i></label>
         <span class="col-xs-9 col-md-5">
-              <input class="form-control input-sm" placeholder='eg. "The humidity is outside the specified limits"' value="" id="humalarm" type="text">
+              <input class="form-control input-sm" placeholder='eg. "The temperature is outside the specified limits"' value="" id="tempalarm" type="text">
               </span>
         <br>
+    </div>
+    <br>
+    <div class="row form-group">
+        <label class="col-xs-3">湿度范围 [%]<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="通过拖动选取设定湿度上下限区间，区间内为正常值"></i></label>
+        <span class="col-xs-9 col-md-5" style="margin-top:-20px;">
+              <span id="slider2" class="color-green">
+              <input type="text" class="js-range-slider2" value="" />
+              </span>
+        </span>
     </div>
     <div class="row form-group">
         <label class="col-xs-3">湿度正常信息<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report humidity within of limits."></i></label>
@@ -786,6 +763,66 @@
             <button onclick="savealarms()" class="btn btn-primary btn-sm pull-right">保存</button>
         </div>
     </div>
+    <div class="row form-group">
+        <label class="col-xs-3">湿度告警信息<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report humidity outside of limits."></i></label>
+        <span class="col-xs-9 col-md-5">
+              <input class="form-control input-sm" placeholder='eg. "The humidity is outside the specified limits"' value="" id="humalarm" type="text">
+              </span>
+        <br>
+    </div>
+    <br>
+    <div class="row form-group">
+        <label class="col-xs-3">气压范围 [Pa]<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="通过拖动选取设定气压上下限区间，区间内为正常值"></i></label>
+        <span class="col-xs-9 col-md-5" style="margin-top:-20px;">
+              <span id="slider2" class="color-green">
+              <input type="text" class="js-range-slider2" value="" />
+              </span>
+        </span>
+    </div>
+    <div class="row form-group">
+        <label class="col-xs-3">气压正常信息<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report humidity within of limits."></i></label>
+        <span class="col-xs-9 col-md-5">
+              <input class="form-control input-sm" placeholder='eg. "The humidity is within the specified limits"' value="" id="humok" type="text">
+              </span>
+        <br>
+        <br>
+    </div>
+    <div class="row form-group">
+        <label class="col-xs-3">气压异常通知<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report humidity outside of limits."></i></label>
+        <span class="col-xs-9 col-md-5">
+              <input class="form-control input-sm" placeholder='eg. "The humidity is outside the specified limits"' value="" id="humalarm" type="text">
+              </span>
+        <br>
+    </div>
+    <br>
+    <div class="row form-group">
+        <label class="col-xs-3">光强范围 [Lx]<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="通过拖动选取设定气压上下限区间，区间内为正常值"></i></label>
+        <span class="col-xs-9 col-md-5" style="margin-top:-20px;">
+              <span id="slider2" class="color-green">
+              <input type="text" class="js-range-slider2" value="" />
+              </span>
+        </span>
+    </div>
+    <div class="row form-group">
+        <label class="col-xs-3">光照正常信息<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report humidity within of limits."></i></label>
+        <span class="col-xs-9 col-md-5">
+              <input class="form-control input-sm" placeholder='eg. "The humidity is within the specified limits"' value="" id="humok" type="text">
+              </span>
+        <br>
+        <br>
+    </div>
+    <div class="row form-group">
+        <label class="col-xs-3">光照异常通知<i style="margin-left: 10px;" class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Set text to report humidity outside of limits."></i></label>
+        <span class="col-xs-9 col-md-5">
+              <input class="form-control input-sm" placeholder='eg. "The humidity is outside the specified limits"' value="" id="humalarm" type="text">
+              </span>
+        <br>
+    </div>
+    <br>
+    <div class="col-xs-9 col-md-8">
+        <button onclick="savealarms()" class="btn btn-primary btn-sm pull-right">保存设置</button>
+    </div>
+    <br>
 </div>
 
 

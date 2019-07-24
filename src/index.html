@@ -24,14 +24,14 @@
             <div class="sidebar-header">
                 <br>
                 <h1><i class="glyphicon glyphicon-dashboard" aria-hidden="true"></i><span style="font-size: 92%;">OS-Q</span></h1>
-                <span style="font-size: 136%;">传感器网络终端设备</span>
+                <span style="font-size: 136%;">网络直连传感器终端</span>
             </div>
             <ul class="list-unstyled components">
+                <li>
+                    <a href="#" id="status"><i class="glyphicon glyphicon-align-left"></i>设备信息</a>
+                </li>
                 <li class="active">
                     <a href="#" id="climate"><i class="glyphicon glyphicon-stats"></i>数据呈现</a>
-                </li>
-                <li>
-                    <a href="#" id="status"><i class="glyphicon glyphicon-align-left"></i>设备状态</a>
                 </li>
                 <li>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"><i  class="glyphicon glyphicon-cog"></i>系统配置</a>
@@ -58,7 +58,7 @@
                             <a href="#" id="email"><i class="glyphicon glyphicon-envelope"></i>邮箱设置</a>
                         </li>
                         <li>
-                            <a href="#" id="pushetta"><i class="glyphicon glyphicon-bell"></i>Pushetta 设置</a>
+                            <a href="#" id="pushetta"><i class="glyphicon glyphicon-bell"></i>Pushetta </a>
                         </li>
                     </ul>
                 </li>
@@ -81,19 +81,19 @@
                         <a href="#" id="reset"><i class="glyphicon glyphicon-repeat"></i>出厂设置</a>
                     </li>
                     <li>
-                        <a data-toggle="modal" href="#update"><i class="glyphicon glyphicon-open"></i>固件更新</a>
+                        <a data-toggle="modal" href="#update"><i class="glyphicon glyphicon-open"></i>设备更新</a>
                     </li>
 
             </ul>
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="https://github.com/OS-Q/D19" class="download">用户手册</a>
+                    <a href="http://www.OS-Q.com/RFID" class="download" data-content="更详细的使用说明和相关问题解决办法">使用手册</a>
                 </li>
                 <li>
-                    <a href="http://www.OS-Q.com" class="download" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="购置更多设备."><i class="glyphicon glyphicon-euro"></i> 商城</a>
+                    <a href="http://www.OS-Q.com" class="download" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="在线售后服务及商城更多硬件设备"><i class="glyphicon glyphicon-euro"></i> 服务</a>
                 </li>
                 <li>
-                    <a href="#" class="article" onclick="logout();">退出</a>
+                    <a href="#" class="article" onclick="logout();">退出登陆</a>
                 </li>
                 <li>
                     <h6 id="mainver" class="text-center"></h6>
@@ -120,8 +120,8 @@
                             <pre id="jsonholder"></pre>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                            <button type="button" onclick="commit();" class="btn btn-success" data-dismiss="modal">Save & Reboot</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" onclick="commit();" class="btn btn-success" data-dismiss="modal">保存并重启</button>
                         </div>
                     </div>
                 </div>
@@ -139,12 +139,12 @@
                         </div>
                         <div class="modal-body">
                             <h5>
-                                <strong>恢复出厂设置</strong>会初始化设备中所有的系统配置，并删除用户的数据及历史， 请务必在该恢复出厂设置前进行  <strong>备份数据</strong>。
+                                <strong>恢复出厂设置</strong>会初始化设备中所有的系统配置，并删除用户的数据及历史， 请务必在恢复出厂设置前  <strong>备份数据</strong>。
                             </h5>
                             <div style="clear:both;">
                                 <br>
                             </div>
-                            <h5>请输入设备hostname进行确认：</h5>
+                            <h5>请输入设备Hostname确认：</h5>
                             <div style="clear:both;">
                                 <br>
                             </div>
@@ -153,7 +153,7 @@
                             </p>
                         </div>
                         <div class="modal-footer">
-                            <button id="destroybtn" type="button" disabled="" onclick="destroy();" class="btn btn-block btn-danger">恢复设备初始状态</button>
+                            <button id="destroybtn" type="button" disabled="" onclick="destroy();" class="btn btn-block btn-danger">初始化设备</button>
                         </div>
                     </div>
                 </div>
@@ -192,14 +192,14 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">升级本设备固件</h4>
+                            <h4 class="modal-title">更新本设备固件</h4>
                         </div>
                         <div class="alert alert-warning">
-                            <strong>注意 !</strong> 请在升级固件前备份历史数据
+                            <strong>注意 !</strong>  请在升级固件前备份相关历史数据
                         </div>
                         <div class="modal-body">
                             <div>
-                                <h4>最新发布固件  </h4>
+                                <h4>最新固件  </h4>
                                 <div id="onlineupdate">
                                     <h5 id=releasehead></h5>
                                     <div style="clear:both;">
@@ -217,7 +217,7 @@
                                 <br>
                             </div>
                             <div>
-                                <h4>当前固件版本: </h4>
+                                <h4>当前设备固件版本: </h4>
                                 <h5 id="versionhead"></h5>
                                 <div class="form-group">
                                     <input id="binform" onchange="allowUpload();" type="file" name="update" accept=".bin">
