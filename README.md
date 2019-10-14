@@ -1,26 +1,19 @@
-﻿# [无线通信](https://github.com/OS-Q/D170)
-
+﻿# [ETH](https://github.com/OS-Q/D70)
 [![sites](OS-Q/OS-Q.png)](http://www.OS-Q.com)
+#### 归属机电控制：[W12](https://github.com/OS-Q/W12)
+#### 关于系统架构：[OS-Q](https://github.com/OS-Q/OS-Q)
 
-#### 归属通信单元：[W25](https://github.com/OS-Q/W25)
+[EDGE-Q](https://github.com/OS-Q/EDGE-Q) -> Q[4] -> M[12] -> W[52] -> D[365] -> H[24] -> N[60] -> S[60]
 
-#### 关于系统架构：[OS-Q](https://github.com/OS-Q)
+### [库描述](https://github.com/OS-Q/D70/wiki) 
 
-Edge-Q -> 体系 Q[1,4] -> 节点 M[1,12] -> 平台 W[1,52] -> 设备 D[1,365]
+[ETH](https://github.com/OS-Q/D70)基于arduino平台构建的功能库
 
-## [设备描述](https://github.com/OS-Q/D170/wiki) 
-
-室内环境设备，通过收集各种传感器数据上传云端，平台化管理
-
-### [收录资源](https://github.com/OS-Q/)
+### [库资源](https://github.com/OS-Q/D70)
 
 * [文档](docs/)
-* [工程](project/)
+* [资源](src/)
+* [示例](examples/)
 
-### [平台资源](https://github.com/sochub)
-
-主控资料和选型方案详情可查阅
-[SoC资源平台](https://github.com/sochub)
-
-### [OS-Q : Operation System for edge devices](http://www.OS-Q.com/Edge/D170)
-####  2019-7-24
+### [OS-Q = Open Solutions | Open Source |  Operating System ](http://www.OS-Q.com/D70)
+####  2019-10-14
